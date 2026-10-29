@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warhammer 40K - Juego</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/juego.js" defer></script>
+</head>
+<body class="fondo-juego">
+    <main class="pagina-juego">
+        <h1>WARHAMMER 40K</h1>
+
+        <section id="entrada" class="panel">
+            <h2>Encontrar parejas</h2>
+            <span></span>
+            <form id="formulario-nombre">
+                <label for="nombre">Nombre del jugador</label>
+                <input type="text" id="nombre" maxlength="30" required>
+                <button class="boton" type="submit">Comenzar</button>
+            </form>
+        </section>
+
+        <section id="partida" hidden>
+            <div class="marcador">
+                <p>Nombre: <span id="jugador"></span></p>
+                <p>Tiempo: <span id="tiempo">60</span> s</p>
+                <p>Puntuación: <span id="puntuacion">0</span></p>
+            </div>
+            <div id="tablero" class="tablero"></div>
+        </section>
+
+        <section id="resultado" class="panel" hidden>
+            <h2 id="titulo-resultado"></h2>
+            <p id="detalle-resultado"></p>
+            <a class="boton" href="juego.html">Volver a jugar</a>
+        </section>
+
+        <a class="volver" href="inicio.html">Volver al inicio</a>
+    </main>
+</body>
+</html>
