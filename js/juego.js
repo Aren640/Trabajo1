@@ -4,7 +4,22 @@ const partida = document.getElementById("partida");
 const tablero = document.getElementById("tablero");
 const tiempoTexto = document.getElementById("tiempo");
 const puntuacionTexto = document.getElementById("puntuacion");
-const simbolos = ["img/Tiranido1.png", "🛡️", "💀", "🔥", "⚡", "👑", "🦅", "🔨", "🪓", "🗡️", "🚀", "💣", "⚙️", "🌟", "🏴"];
+const simbolos = [
+    "img/Tiranido1.png",
+    "img/Tiranido2.png",
+    "img/Tiranido3.png",
+    "img/Tiranido4.png",
+    "img/Tiranido5.png",
+    "img/Tiranido6.png",
+    "img/Tiranido7.png",
+    "img/Tiranido10.png",
+    "img/Tiranido9.png",
+    "img/Tiranido11.png",
+    "img/Tiranido12.png",
+    "img/Tiranido13.png",
+    "img/Tiranido14.png",
+    "img/Tiranido15.png"
+];
 
 let nombre = "";
 let primeraCarta = null;
@@ -77,7 +92,7 @@ function girarCarta(carta) {
     if (carta.dataset.simbolo.endsWith(".png")) {
         const imagen = document.createElement("img");
         imagen.src = carta.dataset.simbolo;
-        imagen.alt = "Tiránido 1";
+        imagen.alt = "Imagen de tiránido";
         carta.textContent = "";
         carta.appendChild(imagen);
     } else {
@@ -120,7 +135,7 @@ function girarCarta(carta) {
 
     puntuacionTexto.textContent = puntos;
 
-    if (parejas === 15) {
+    if (parejas === simbolos.length) {
         terminarPartida(true);
     }
 }
